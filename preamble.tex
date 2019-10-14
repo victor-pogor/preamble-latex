@@ -1,0 +1,32 @@
+%%% Preambulă %%%
+
+% Author: Victor Pogor (victor.pogor@outlook.com)
+% https://github.com/victor-pogor/preamble-latex
+
+\usepackage{fontspec} % XeTeX
+\usepackage{xunicode} % Unicode pentru XeTeX
+
+% Limba română
+\usepackage{polyglossia}
+\setdefaultlanguage{romanian}
+
+% Marginile paginii
+\usepackage{geometry}
+\geometry{left=3cm}
+\geometry{right=1cm}
+\geometry{top=2cm}
+\geometry{bottom=2cm}
+
+\renewcommand{\baselinestretch}{1.4} % Distanța între rânduri de o linie și jumătate
+\parindent 1.27cm % Indentația paragrafului
+
+% Fonturi, xelatex
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{Times New Roman}
+\newfontfamily\cyrillicfont{Times New Roman}
+\setmonofont{FreeMono} % Font pepntru codul sursă
+
+% Formule
+\usepackage{mathtools,unicode-math} % Incompatibil cu amsmath
+\setmathfont{XITS Math}             % Font pentru formule: https://github.com/khaledhosny/xits-math
+\numberwithin{equation}{section}    % Formula de tip secțiune.număr
