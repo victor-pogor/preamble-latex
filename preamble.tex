@@ -10,9 +10,12 @@
 \usepackage{polyglossia}
 \setdefaultlanguage{romanian}
 \setotherlanguages{english,russian}
+\PolyglossiaSetup{romanian}{indentfirst=true}
 
 % Marginile paginii
-\usepackage{geometry}
+% Atributul showframe este destinat numai la etapa de
+% editare a documentului.
+\usepackage[showframe]{geometry}
 \geometry{left=3cm}
 \geometry{right=1cm}
 \geometry{top=2cm}
@@ -31,3 +34,48 @@
 \usepackage{mathtools,unicode-math} % Incompatibil cu amsmath
 \setmathfont{XITS Math}             % Font pentru formule: https://github.com/khaledhosny/xits-math
 \numberwithin{equation}{section}    % Formula de tip secțiune.număr
+
+
+% Diagrame, Tabele
+\usepackage[font=scriptsize]{caption} % Ajustarea titlurilor figurilor.
+\usepackage{wrapfig} % Înfășurarea textului in jurul imaginilor, diagramelor, etc.
+\usepackage{tikz}
+\usepackage{pgfplots} % Afișarea graficelor funcțiilor
+\usepackage{float}
+\usepackage{standalone}
+
+\captionsetup{justification=centering} % Caption vor fi mereu pe centru.
+
+\pgfplotsset{compat=1.11}
+\usetikzlibrary{shapes.geometric, arrows}
+
+% Stiluri pentru diagrama flowchart.
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=red!30]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+% Stiluri pentru cod sursă.
+\usepackage{color}
+\definecolor{bluekeywords}{rgb}{0.13,0.13,1}
+\definecolor{greencomments}{rgb}{0,0.5,0}
+\definecolor{redstrings}{rgb}{0.9,0,0}
+
+\usepackage{listings}
+\lstset{language=[Sharp]C,
+  showspaces=false,
+  showtabs=false,
+  breaklines=true,
+  showstringspaces=false,
+  breakatwhitespace=true,
+  escapeinside={(*@}{@*)},
+  backgroundcolor = \color{lightgray},
+  commentstyle=\color{greencomments},
+  keywordstyle=\color{bluekeywords},
+  stringstyle=\color{redstrings},
+  basicstyle=\ttfamily\footnotesize,
+  numbers=left,
+  xleftmargin=0.7cm,
+  framexleftmargin=0.7cm
+}
