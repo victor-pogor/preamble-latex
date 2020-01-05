@@ -35,7 +35,6 @@
 \setmathfont{XITS Math}             % Font pentru formule: https://github.com/khaledhosny/xits-math
 \numberwithin{equation}{section}    % Formula de tip secțiune.număr
 
-
 % Diagrame, Tabele
 \usepackage[font=scriptsize]{caption} % Ajustarea titlurilor figurilor.
 \usepackage{wrapfig} % Înfășurarea textului in jurul imaginilor, diagramelor, etc.
@@ -47,7 +46,7 @@
 \captionsetup{justification=centering} % Caption vor fi mereu pe centru.
 
 \pgfplotsset{compat=1.11}
-\usetikzlibrary{shapes.geometric, arrows}
+\usetikzlibrary{shapes.geometric, arrows, calc, intersections, math}
 
 % Stiluri pentru diagrama flowchart.
 \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=red!30]
