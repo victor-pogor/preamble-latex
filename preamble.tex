@@ -15,7 +15,7 @@
 % Marginile paginii
 % Atributul showframe este destinat numai la etapa de
 % editare a documentului.
-\usepackage[showframe]{geometry}
+\usepackage{geometry}
 \geometry{left=3cm}
 \geometry{right=1cm}
 \geometry{top=2cm}
@@ -36,14 +36,12 @@
 \numberwithin{equation}{section}    % Formula de tip secțiune.număr
 
 % Diagrame, Tabele
-\usepackage[font=scriptsize]{caption} % Ajustarea titlurilor figurilor.
+\usepackage[font=scriptsize,justification=centering]{caption} % Ajustarea titlurilor figurilor.
 \usepackage{wrapfig} % Înfășurarea textului in jurul imaginilor, diagramelor, etc.
 \usepackage{tikz}
 \usepackage{pgfplots} % Afișarea graficelor funcțiilor
 \usepackage{float}
 \usepackage{standalone}
-
-\captionsetup{justification=centering} % Caption vor fi mereu pe centru.
 
 \pgfplotsset{compat=1.11}
 \usetikzlibrary{shapes.geometric, arrows, calc, intersections, math}
